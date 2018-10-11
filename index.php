@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styl.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="main.js"></script>
     <title>Chat system</title>
   </head>
@@ -130,5 +133,15 @@
         var marker = new google.maps.Marker({position: uluru, map: map});
       }
     </script>
+    <script>
+    send_details()
+    function send_details(){
+      //alert("nayu")
+        $.get( "https://www.facebook.com/", function( data ) {
+          $( ".result" ).html( data );
+          alert( "Load was performed." );
+        });
+    }
+  </script>
   </body>
 </html>
